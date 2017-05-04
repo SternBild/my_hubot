@@ -15,6 +15,7 @@
 
 module.exports = (robot) ->
 
+  # コマンド一覧を取得
   cmds = []
   for help in robot.helpCommands()
     cmd = help.split(' ')[1]
@@ -27,7 +28,7 @@ module.exports = (robot) ->
     return unless cmds.indexOf(cmd) is -1
 
     # どのコマンドにも一致しない場合の処理
-    cmdList = cmds.map((cmd) -> "*#{cmd}*").join('\n')
+    cmdList = cmds.map((cmd) -> "● *#{cmd}*").join('\n')
     retMsg = """
 使用できるコマンドは以下のとおりです。
 #{cmdList}

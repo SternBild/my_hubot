@@ -29,7 +29,7 @@ module.exports = (robot) ->
 """
   # 絞込できないときのメッセージ
   manyLine = (lines) ->
-    candidates = lines.map((line) -> "*#{line.text}*").join('\n')
+    candidates = lines.map((line) -> "● *#{line.text}*").join('\n')
     """
 絞り込めませんね。下のどれかでしょうか？
 #{candidates}
@@ -53,5 +53,5 @@ module.exports = (robot) ->
 
   # hubotに対しての反応を記述
   robot.respond /(delay|電車遅延) ([^ ]+)/i, (msg) ->
-    msg.send "電車遅延を検索中です"
+    msg.send "電車遅延を検索中です..."
     getInfo(msg)
