@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot delay <name>
-#   hubot 電車遅延 <name>
+#   hubot delay :name - display delay info
+#   hubot 電車遅延 :name - display delay info
 #
 # Author:
 #   nobukichi
